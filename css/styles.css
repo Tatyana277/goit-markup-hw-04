@@ -134,7 +134,18 @@ body {
 
 /* ==== begin section hero ==== */
 .hero {
-  background-color: var(--background-primary);
+  width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-color: #c4c4c4;
+  background-position: left center;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -183,6 +194,19 @@ body {
 .description-title-list {
   width: 270px;
 }
+.description-icon-list {
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  background-color: var(--background-secondary);
+  border-radius: 4px;
+}
+.description-icon {
+  display: block;
+  margin: 0 auto;
+}
+
 .description-title-list:not(:last-child) {
   margin-right: 30px;
 }
@@ -279,6 +303,27 @@ body {
 }
 /* ==== end section our-team ==== */
 
+/* ==== begin section clients ==== */
+.clients-list {
+  display: flex;
+}
+.clients-list-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 16px 32px;
+}
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-link:hover,
+.clients-link:focus {
+  fill: var(--accent-color);
+}
+
+/* ==== end section clients ==== */
 /* ==== begin footer ==== */
 .footer {
   background-color: var(--background-primary);
