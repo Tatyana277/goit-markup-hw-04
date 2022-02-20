@@ -10,6 +10,7 @@
   --background-primary: #2f303a;
   --background-secondary: #f5f4fa;
   --background-accent: #188ce8;
+  --icon-color: #afb1b8;
 }
 
 h1,
@@ -119,6 +120,8 @@ body {
   color: var(--accent-color);
 }
 .nav-link-contact {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -130,11 +133,22 @@ body {
 .nav-link-contact:focus {
   color: var(--accent-color);
 }
+
+.nav-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.nav-icon:hover {
+  cursor: pointer;
+  fill: var(--accent-color);
+}
+
 /* ===== end header ==== */
 
 /* ==== begin section hero ==== */
 .hero {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
   margin: 0 auto;
   background-image: linear-gradient(
@@ -269,6 +283,8 @@ body {
   margin-top: -30px;
 }
 .our-team {
+  max-width: 1600px;
+  margin: 0 auto;
   background-color: var(--background-secondary);
 }
 .member-team {
@@ -281,8 +297,10 @@ body {
   background-color: var(--tertiary-text-color);
 }
 .member-team-card {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 32px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .name-member-team {
@@ -300,6 +318,36 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  /* justify-content: space-between; */
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--tertiary-text-color);
+  border-radius: 50%;
+}
+
+.social-list-icon {
+  fill: var(--icon-color);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--tertiary-text-color);
 }
 /* ==== end section our-team ==== */
 
@@ -307,23 +355,30 @@ body {
 .clients-list {
   display: flex;
 }
-.clients-list-item {
+
+.clients-link {
+  display: block;
   width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 16px 32px;
+  fill: var(--icon-color);
 }
 .clients-list-item:not(:last-child) {
   margin-right: 30px;
 }
 .clients-link:hover,
 .clients-link:focus {
+  border: 1px solid var(--accent-color);
+}
+.clients-link:hover,
+.clients-link:focus {
   fill: var(--accent-color);
 }
-
 /* ==== end section clients ==== */
+
 /* ==== begin footer ==== */
 .footer {
   background-color: var(--background-primary);
@@ -333,6 +388,13 @@ body {
 .logo-link-footer {
   display: block;
   margin-bottom: 20px;
+}
+.container-addres {
+  margin-right: 70px;
+}
+.container-footer {
+  display: flex;
+  align-items: baseline;
 }
 .addres {
   font-style: normal;
@@ -353,6 +415,32 @@ body {
 .addres:focus {
   color: var(--accent-color);
 }
+.social-footer {
+  display: block;
+  width: 206px;
+  height: 80px;
+}
+.social-title {
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--tertiary-text-color);
+  margin-bottom: 20px;
+}
+
+.social-list-link-footer {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.social-list-icon-footer {
+  fill: var(--tertiary-text-color);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background: var(--accent-color);
+}
 /* ==== end footer ==== */
 
 /* ==== begin section portfolio ==== */
@@ -366,6 +454,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   margin: -15px;
+}
+.filter-list-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .filter-list-item {
   margin: 15px;
@@ -403,6 +495,8 @@ body {
 .btn-filter:focus {
   background-color: var(--accent-color);
   color: var(--tertiary-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .title-projct {
   font-weight: 700;
